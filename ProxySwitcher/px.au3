@@ -60,6 +60,16 @@ While 1
       ApplyProxy("proxy14")
     Case $msg = $Import15Button
       ApplyProxy("proxy15")
+    Case $msg = $Import16Button
+      ApplyProxy("proxy16")
+    Case $msg = $Import17Button
+      ApplyProxy("proxy17")
+    Case $msg = $Import18Button
+      ApplyProxy("proxy18")
+    Case $msg = $Import19Button
+      ApplyProxy("proxy19")
+    Case $msg = $Import20Button
+      ApplyProxy("proxy20")
   Case $msg = $ReloadButton
 	  ReloadConfig()
   Case $msg = $OpenButton

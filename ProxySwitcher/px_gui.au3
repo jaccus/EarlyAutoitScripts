@@ -1,16 +1,16 @@
 $SwitcherTitle = "SC Proxy Switcher 1.0"
-GuiCreate($SwitcherTitle, 210, 145)
+GuiCreate($SwitcherTitle, 210, 165)
 GuiSetIcon(@SystemDir & "\mspaint.exe", 0)
 
 $RunSCButton = GUICtrlCreateButton("RunSC",150,1,60,20)
 $ResizeSCButton = GUICtrlCreateButton("ResizeSC",150,25,60,20)
 $ShowSCButton = GUICtrlCreateButton("ShowSC",150,50,60,20)
 $HideSCButton = GUICtrlCreateButton("HideSC",150,75,60,20)
-$CloseSCButton = GUICtrlCreateButton("CloseSC",150,125,60,20)
+$CloseSCButton = GUICtrlCreateButton("CloseSC",150,145,60,20)
 $OnTopCheckBox = GUICtrlCreateCheckbox("On Top",150,100,60,20)
 
 $ImportLabel = GUICtrlCreateLabel("Import Proxy Number:",1,1,130,20)
-$AuthorLabel = GUICtrlCreateLabel("(c) 2006 by Jaccus",30,130,100,20)
+$AuthorLabel = GUICtrlCreateLabel("(c) 2006 by Jaccus",30,150,100,20)
 
 $Import1Button = GUICtrlCreateButton("1",5,20,20,20)
 $Import2Button = GUICtrlCreateButton("2",30,20,20,20)
@@ -28,5 +28,11 @@ $Import13Button = GUICtrlCreateButton("13",55,70,20,20)
 $Import14Button = GUICtrlCreateButton("14",80,70,20,20)
 $Import15Button = GUICtrlCreateButton("15",105,70,20,20)
 
-$OpenButton = GUICtrlCreateButton("Open",5,100,35,20)
-$ReloadButton = GUICtrlCreateButton("Reload Config",45,100,80,20)
+$Import16Button = GUICtrlCreateButton("16",5,95,20,20)
+$Import17Button = GUICtrlCreateButton("17",30,95,20,20)
+$Import18Button = GUICtrlCreateButton("18",55,95,20,20)
+$Import19Button = GUICtrlCreateButton("19",80,95,20,20)
+$Import20Button = GUICtrlCreateButton("20",105,95,20,20)
+
+$OpenButton = GUICtrlCreateButton("Open",5,120,35,20)
+$ReloadButton = GUICtrlCreateButton("Reload Config",45,120,80,20)

@@ -90,6 +90,31 @@ GUICtrlSetState($Import15Button,$GUI_DISABLE)
 Else
 GUICtrlSetState($Import15Button,$GUI_ENABLE)
 EndIf
+If Not SectionCheckExists("proxy16") Then
+GUICtrlSetState($Import16Button,$GUI_DISABLE)
+Else
+GUICtrlSetState($Import16Button,$GUI_ENABLE)
+EndIf
+If Not SectionCheckExists("proxy17") Then
+GUICtrlSetState($Import17Button,$GUI_DISABLE)
+Else
+GUICtrlSetState($Import17Button,$GUI_ENABLE)
+EndIf
+If Not SectionCheckExists("proxy18") Then
+GUICtrlSetState($Import18Button,$GUI_DISABLE)
+Else
+GUICtrlSetState($Import18Button,$GUI_ENABLE)
+EndIf
+If Not SectionCheckExists("proxy19") Then
+GUICtrlSetState($Import19Button,$GUI_DISABLE)
+Else
+GUICtrlSetState($Import19Button,$GUI_ENABLE)
+EndIf
+If Not SectionCheckExists("proxy20") Then
+GUICtrlSetState($Import20Button,$GUI_DISABLE)
+Else
+GUICtrlSetState($Import20Button,$GUI_ENABLE)
+EndIf
 EndFunc
 Func RunSC()
 	Run($AdresSC,$DirSC)
