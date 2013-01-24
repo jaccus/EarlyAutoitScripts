@@ -3,8 +3,8 @@
 $ProcessSC = "sc32.exe"
 $TitleSC = "SocksCap Control"
 $IniName = "px_settings.ini"
-$ResizeHeight = 373
-$ResizeWidth = 463
+$ResizeHeight = 645
+$ResizeWidth = 254
 $ErrorTitle = "Error"
 $ErrorExist = "Run SocksCap first..."
 Opt("GUIResizeMode", 0)
@@ -115,6 +115,46 @@ GUICtrlSetState($Import20Button,$GUI_DISABLE)
 Else
 GUICtrlSetState($Import20Button,$GUI_ENABLE)
 EndIf
+If Not SectionCheckExists("proxy21") Then
+GUICtrlSetState($Import21Button,$GUI_DISABLE)
+Else
+GUICtrlSetState($Import21Button,$GUI_ENABLE)
+EndIf
+If Not SectionCheckExists("proxy22") Then
+GUICtrlSetState($Import22Button,$GUI_DISABLE)
+Else
+GUICtrlSetState($Import22Button,$GUI_ENABLE)
+EndIf
+If Not SectionCheckExists("proxy23") Then
+GUICtrlSetState($Import23Button,$GUI_DISABLE)
+Else
+GUICtrlSetState($Import23Button,$GUI_ENABLE)
+EndIf
+If Not SectionCheckExists("proxy24") Then
+GUICtrlSetState($Import24Button,$GUI_DISABLE)
+Else
+GUICtrlSetState($Import24Button,$GUI_ENABLE)
+EndIf
+If Not SectionCheckExists("proxy25") Then
+GUICtrlSetState($Import25Button,$GUI_DISABLE)
+Else
+GUICtrlSetState($Import25Button,$GUI_ENABLE)
+EndIf
+If Not SectionCheckExists("proxy26") Then
+GUICtrlSetState($Import26Button,$GUI_DISABLE)
+Else
+GUICtrlSetState($Import26Button,$GUI_ENABLE)
+EndIf
+If Not SectionCheckExists("proxy27") Then
+GUICtrlSetState($Import27Button,$GUI_DISABLE)
+Else
+GUICtrlSetState($Import27Button,$GUI_ENABLE)
+EndIf
+If Not SectionCheckExists("proxy28") Then
+GUICtrlSetState($Import28Button,$GUI_DISABLE)
+Else
+GUICtrlSetState($Import28Button,$GUI_ENABLE)
+EndIf
 EndFunc
 Func RunSC()
 	Run($AdresSC,$DirSC)
@@ -218,4 +258,15 @@ Func OpenConfig()
 If FileExists($IniLocation) Then
 	Run("notepad.exe " & $IniLocation, $IniDir)
 EndIf
+EndFunc
+Func ImportProfile($ProfileName,$IniLocation)
+	$SC_profile = IniRead($IniLocation,"data",$ProfileName,"NotFound")
+	ShowSC()
+	Send("{ALT}"&"fi")
+	Sleep(50)
+	Send("{TAB 3}"&"{SPACE}"&"{TAB}"&"{ENTER}")
+	Send($SC_profile)
+	Send("{ENTER 2}")
+	WinWaitActive("SocksCap information")
+	Send("{ENTER}")
 EndFunc

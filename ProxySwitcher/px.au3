@@ -14,7 +14,7 @@ While 1
     Case $msg = $RunSCButton
 	  RunSC()
 	  ResizeSC()
-	  ApplyProxy("proxy1")
+	  ;ApplyProxy("proxy1")
     Case $msg = $ResizeSCButton
       ResizeSC() 
 	Case $msg = $ShowSCButton
@@ -70,9 +70,29 @@ While 1
       ApplyProxy("proxy19")
     Case $msg = $Import20Button
       ApplyProxy("proxy20")
+    Case $msg = $Import21Button
+      ApplyProxy("proxy21")
+    Case $msg = $Import22Button
+      ApplyProxy("proxy22")
+    Case $msg = $Import23Button
+      ApplyProxy("proxy23")
+    Case $msg = $Import24Button
+      ApplyProxy("proxy24")
+    Case $msg = $Import25Button
+      ApplyProxy("proxy25")
+    Case $msg = $Import26Button
+      ApplyProxy("proxy26")
+    Case $msg = $Import27Button
+      ApplyProxy("proxy27")
+    Case $msg = $Import28Button
+      ApplyProxy("proxy28")
   Case $msg = $ReloadButton
 	  ReloadConfig()
   Case $msg = $OpenButton
 	  OpenConfig()
+  Case $msg = $ProfileButton1
+	  ImportProfile("sc1",$IniLocation)
+  Case $msg = $ProfileButton2
+	  ImportProfile("sc2",$IniLocation)
   EndSelect
 WEnd
